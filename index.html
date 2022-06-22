@@ -5,17 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/style.css" />
+    <script src="https://kit.fontawesome.com/32f66c0faa.js" crossorigin="anonymous"></script>
     <title>Fábio Vianna</title>
   </head>
   <body>
     <header>
       <span id="topo"></span>
       <nav   class="navegation">
-        <h1 >FV</h1>
+        <h1 id="logo">FV</h1>
         <ul>
           <a href="#topo">
             <li>inicio</li>
           </a>
+
+          <a href="#habilidades">
+            <li>habilidades</li>
+          </a>
+
           <a href="#portifolio">
             <li>portifolios</li>
           </a>
@@ -25,7 +31,7 @@
         </ul>
 
         
-        <button id="btn">Change Color</button>
+        <span class="dark" > <i class="fa-solid fa-moon"></i></span>
       </nav>
     </header>
     <main class="content">
@@ -40,11 +46,11 @@
           
           
 
-          <a href="assets/curriculo/curriculo fabio 2022.pdf" type="application/pdf" download="Curriculo Fábio Vianna"><button >Baixar Cv</button></a>
+          <a  id="cv" href="assets/curriculo/curriculo fabio 2022.pdf" type="application/pdf" download="Curriculo Fábio Vianna">Baixar Cv</a>
 
         </div>
 
-        <div class="photo">
+        <div class="avatar">
           <img src="assets/img/undraw_developer_activity_re_39tg.svg" alt="logo de um rapaz mechendo no computador" />
         </div>
       </section>
@@ -52,7 +58,7 @@
 
       <section class="secondSec">
 
-        <h2>Skills</h2>
+        <h2 id="habilidades" >Habilidades</h2>
         <div class="containerSkills">
 
            <div class="box">
@@ -100,7 +106,7 @@
               <h2>Jogo da Memória Dragon Ball Z</h2>
               <p>Este jogo foi desenvolvido com as tecnologias de Web Html 5, Css3 e Javascript.</p>
 
-              <a href="https://fabiovianna10.github.io/memoria/"  target="_blank"><button>Projeto 1</button></a>
+              <a class="btnLink" href="https://fabiovianna10.github.io/memoria/"  target="_blank">Projeto 1</a>
 
 
             </div>
@@ -122,7 +128,7 @@
               <h2>Calculadora</h2>
               <p>Calculadora desenvolvida com as tecnologias de Web Html 5, Css3 e Javascript.</p>
 
-              <a href="https://fabiovianna10.github.io/Calculadora/"  target="_blank"><button>Projeto 2</button></a>
+              <a class="btnLink"href="https://fabiovianna10.github.io/Calculadora/"  target="_blank">Projeto 2</a>
 
 
             </div>
@@ -144,7 +150,7 @@
               <h2>Site Padaria Vianna</h2>
               <p>Este site foi desenvolvido com as tecnologias de Web Html 5 e  Css3 .</p>
 
-              <a href="https://fabiovianna10.github.io/Site-Padaria-Vianna/"  target="_blank"><button>Projeto 3</button></a>
+              <a class="btnLink"href="https://fabiovianna10.github.io/Site-Padaria-Vianna/"  target="_blank">Projeto 3</a>
 
 
             </div>
@@ -176,18 +182,18 @@
       <div class="containerFooter">
         <h2 id="contatos">Contatos</h2>
 
-        <div class="boxIcones">
+      
 
 
 
-          <a href="https://github.com/FabioVianna10" target="_blank"><img class="icones" src="assets/img/github.png"  alt="icone do github"></a>
+          <a class="icones"  href=""><i class="fa-brands fa-github"></i></a>
 
-          <a href="https://api.whatsapp.com/send/?phone=5519992857395&text&app_absent=0" target="_blank"><img class="icones"src="assets/img/whats ico.png" alt="icone do whatsapp"></a>
+          <a class="icones"href=""><i class="fa-brands fa-whatsapp"></i></a>
 
-          <a href="https://www.linkedin.com/in/f%C3%A1bio-vianna-99340772/"  target="_blank"><img class="icones"src="assets/img/linkedin ico.png" alt="icone do linkedin"></a>
+          <a class="icones"href=""><i class="fa-brands fa-linkedin"></i></a>
         
 
-      </div>
+   
 
 
       </div>

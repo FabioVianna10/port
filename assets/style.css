@@ -6,337 +6,281 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
-html {
-}
-::-webkit-scrollbar {
-  width: 12px;
-  background: #e2e3e2;
-}
-::-webkit-scrollbar-thumb {
-  background: #06ec4f80;
+
+:root {
+  --colorbg: black;
+  --colorbg2: #272727;
+  --colorbgwhite: #ffff;
+
+  --colorletter: #fff;
+  --colorletterhover: rgba(255, 255, 255, 0.578);
+  --logohover: rgba(255, 255, 255, 0.641);
+  --lihover: rgba(255, 255, 255, 0.214);
+  --btncolor: #36ab0b;
+  --btncolorhover: #36ab0b81;
 }
 
 body {
-  background-color: black;
+  background-color: var(--colorbg);
 }
 
-.navDark {
-  background-color: #fff;
-  color: #272727;
-}
+/*---------header------------*/
 
 .navegation {
   width: 100%;
-  height: 75px;
-  padding: 25px 0;
+  height: 8rem;
+  padding: 2.5rem 0;
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
-  background-color: #272727;
+  align-items: center;
+  background-color: var(--colorbg2);
   position: fixed;
 }
 
-h1 {
-  font-size: 1.5rem;
+#logo {
+  font-size: 2.2rem;
   font-weight: bold;
-  letter-spacing: 2px;
-  color: #fff;
+  letter-spacing: 0.2rem;
+  color: var(--colorletter);
   cursor: pointer;
   transition: 0.5s ease-in-out;
 }
 
-h1:hover {
+#logo:hover {
   transform: scale(1.1);
-  color: rgba(255, 255, 255, 0.641);
+  color: var(--logohover;);
 }
 
 ul {
   display: flex;
-  gap: 25px;
+  gap: 3rem;
 }
 
 li {
   list-style: none;
-  color: #fff;
+  color: var(--colorletter);
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.5rem;
+
   transition: 0.5s ease-in-out;
   text-transform: uppercase;
 }
 
 li:hover {
   transform: scale(1.2);
-  color: rgba(255, 255, 255, 0.214);
+  color: var(--lihover);
 }
 
 a {
   text-decoration: none;
 }
 
-#btn {
-  font-size: 0.8rem;
-  border: none;
-  border-radius: 10px;
-  padding: 5px;
-  width: 120px;
-  background-color: rgb(16, 214, 148);
-  color: #fff;
-  font-weight: bold;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: 0.6s ease-in-out;
-}
 
-#btn:hover {
-  background-color: rgba(16, 214, 148, 0.433);
-}
-
-/*-----------------*/
+/*-----MAIN------------*/
 
 .firstSec {
   display: flex;
   align-items: center;
+  width: 100%;
+  height: 80vh;
 }
 
 .introduce {
-  margin-top: 80px;
-  width: 50%;
-  height: 270px;
-  padding: 10px 25px;
+  width: 40%;
+  height: 80%;
+  padding: 4rem 3rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
 .introduce h2 {
-  color: #fff;
-  letter-spacing: 4px;
+  color: var(--colorletter);
+  letter-spacing: 0.4rem;
+  font-size: 2rem;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 600;
 }
 .introduce p {
-  color: #fff;
-  line-height: 25px;
+  color: var(--colorletter);
+  line-height: 2.9rem;
+  font-size: 1.5rem;
 }
 
-.introduce button {
-  font-size: 1rem;
-  border: none;
-  border-radius: 10px;
-  padding: 10px;
-  width: 110px;
-  background-color: rgb(16, 214, 148);
-  color: #fff;
-  font-weight: bold;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: 0.6s ease-in-out;
+#cv {
+  background-color: var(--btncolor);
+  color: var(--colorletter);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-shadow: 0.1rem 0.2rem 0rem var(--colorbg2);
+  transition: 0.5s ease-in-out;
 }
 
-.introduce button:hover {
-  transform: scale(1.1);
-  background-color: rgba(16, 214, 148, 0.816);
+#cv:hover {
+  background-color: var(--btncolorhover);
 }
 
-.photo {
-  margin-top: 50px;
-  width: 50%;
-  height: 250px;
-  padding: 10px 15px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.avatar {
+  width: 35%;
+  height: 80%;
+  padding: 5rem 3rem;
 }
 
-.photo img {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
+.avatar img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  background-position-x: right;
 }
 
 .secondSec {
   width: 100%;
-  height: 300px;
+  height: 0%;
 }
 
 .secondSec h2 {
-  margin-top: 50px;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
   font-weight: bold;
-  color: #fff;
-  margin-bottom: 15px;
+  color: var(--colorletter);
+  padding: 8rem 0;
   transition: 0.5s ease-in;
 }
 
 .secondSec h2:hover {
-  color: rgba(255, 255, 255, 0.471);
+  color: var(--colorletterhover);
   cursor: pointer;
-  
 }
 
 .containerSkills {
   width: 100%;
-  height: 250px;
+  height: 45rem;
   display: flex;
-  background: #fff;
+  align-items: center;
+  justify-content: space-evenly;
+  background: var(--colorbgwhite);
 }
 
 .box {
-  margin-top: 15px;
-  padding: 10px;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-
-  width: 50%;
-  height: 300px;
+  width: 20rem;
 }
 
 .box img {
-  width: 40%;
+  width: 10rem;
   height: auto;
-  transition: 1s ease-in-out;
+  opacity: 0.7;
+  transition: 0.5 ease-in-out;
 }
 
 .box img:hover {
-  transform: rotateY(180deg);
+  opacity: 2.5;
+  transform: scale(1.5);
 }
 
 .tirdSec {
-  height: 950px;
   width: 100%;
-  padding: 15px;
+  height: 110rem;
+  padding: 3rem 0;
 }
 
 .tirdSec h2 {
-  color: #fff;
+  color: var(--colorletter);
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 2.5rem;
   text-transform: uppercase;
-  font-size: 1.6rem;
-  letter-spacing: 2px;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
   font-weight: bold;
-  color: #fff;
+  color: var(--colorletter);
+  cursor: pointer;
   transition: 0.5s ease-in;
+  cursor: pointer;
+  padding-bottom: 8rem;
 }
 
 .tirdSec h2:hover {
-  color: rgba(255, 255, 255, 0.601);
- 
-  cursor: pointer;
+  color: var(--colorletterhover);
 }
 
 .projectsContainer {
-  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  height: 800px;
+  width: 100%;
+  height: 80rem;
+  padding: 5rem 10rem;
 }
 
 .projectBox {
-  background-color: #272727;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 360px;
-  width: 80%;
+  height: 100vh;
+  width: 100%;
 }
 
 .projectTitle {
-  background-image: linear-gradient(
-    60deg,
-    rgba(71, 248, 98, 0.658),
-    rgba(72, 114, 72, 0.734)
-  );
+  background-color: #454545;
+  border: solid;
+ 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  padding: 10px;
-  height: 100%;
-  width: 50%;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+  height: 30rem;
+  width: 45%;
 }
 
 .projectTitle h2 {
-  font-size: 1.4rem;
-  letter-spacing: 2px;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .projectTitle p {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.863);
-  line-height: 35px;
+  font-size: 1.6rem;
+  color: var(--colorletter);
+  line-height: 4rem;
 }
 
-.projectTitle button {
-  padding: 10px;
-  width: 110px;
-  height: 50px;
+.btnLink {
+  padding: 2rem 3rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
-  border: none;
-  color: #272727;
+  background-color: var(--btncolor);
+  color: var(--colorletter);
   transition: 0.5s ease-in-out;
 }
 
-.projectTitle button:hover {
-  background-color: #2727278b;
-  color: #fff;
-  transform: scale(1.1);
+.btnLink:hover {
+  background-color: var(--btncolorhover);
 }
 
 .projectImg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background: linear-gradient(
-    65deg,
-    black,
-    rgb(74, 72, 72),
-    rgb(210, 210, 222)
-  );
-
-  height: 100%;
+ 
+  height: 30rem;
   width: 50%;
+
 }
 
 .projectImg img {
-  width: 90%;
-  position: absolute;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
   transition: 0.8s ease-in-out;
+
 }
 
-.projectImg img:hover {
-  transform: scale(1.1);
-}
 
-#calculadora {
-  background: #d3ba87dd;
-}
 
-#calc {
-  background: #f7f1e8dd;
-}
-
-#site {
-  background: #272727;
-}
-
-#padaria {
-  background: #212c89;
-}
 
 /*-----Footer-------------*/
 
@@ -365,7 +309,7 @@ a {
 
 .containerFooter h2:hover {
   cursor: pointer;
- 
+
   color: rgba(0, 0, 0, 0.647);
 }
 
@@ -379,6 +323,5 @@ a {
 .boxIcones img {
   width: 35%;
 }
-
 
 /*-------Responsibilidade---------------------*/
